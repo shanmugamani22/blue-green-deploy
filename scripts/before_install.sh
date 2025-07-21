@@ -1,6 +1,9 @@
-<html>
-  <head><title>Blue Page</title></head>
-  <body style="background-color:blue; color:white; text-align:center;">
-    <h1>Blue Environment</h1>
-  </body>
-</html>
+#!/bin/bash
+set -e
+
+echo "Installing Apache2..."
+sudo apt-get update
+sudo apt-get install -y apache2
+
+echo "Cleaning existing HTML..."
+sudo rm -rf /var/www/html/*
